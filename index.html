@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercicio 26: Formulario con video</title>
+    <link rel="stylesheet" href="css/bootstrap.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div class="header__left">
+        <img
+          src="assets/ESA_Title.svg"
+          alt="Texto 'The European Space Agency'"
+        />
+      </div>
+      <div class="header__right">
+        <img
+          src="assets/European_Space_Agency_logo.svg.webp"
+          alt="Logo de European Space Agency"
+        />
+      </div>
+    </header>
+    <main>
+      <div class="main__fondo">
+        <video autoplay loop muted id="video">
+          <source src="assets/tierra_video.mp4" type="video/mp4" />
+          <source src="assets/tierra_video.webm" type="video/webm" />
+        </video>
+      </div>
+      <section class="container section__form">
+        <div class="row">
+          <h1 class="col-12 form__h1">Formulario de contacto</h1>
+          <p class="col-12 form__texto">
+            Antes de contactar con nosotros a través de este formulario, por
+            favor considere revisar nuestro apartado de FAQs para revisar si su
+            pregunta ha sido respondida ya.
+          </p>
+        </div>
+        <form class="row" action="" method="post">
+          <div class="col-md-6 form__datos">
+            <label class="form__label" for="nombre">Nombre<span class="form__asterisco">*</span></label>
+            <input class="form__input" type="text" name="nombre" id="nombre" required/>
+          </div>
+          <div class="col-md-6 form__datos">
+            <label class="form__label" for="apellidos">Apellidos<span class="form__asterisco">*</span></label>
+            <input class="form__input" type="text" name="apellidos" id="apellidos" required />
+          </div>
+          <div class="col-md-6 form__datos">
+            <label class="form__label" for="telefono">Teléfono<span class="form__asterisco">*</span></label>
+            <input class="form__input" type="text" name="telefono" id="telefono" required pattern="[0-9]{9}"/>
+          </div>
+          <div class="col-md-6 form__datos">
+            <label class="form__label" for="empresa">Empresa (opcional)</label>
+            <input class="form__input" type="text" name="empresa" id="empresa" />
+          </div>
+          <div class="col-12 form__datos">
+            <label class="form__label" for="email">Email<span class="form__asterisco">*</span></label>
+            <input class="form__input" type="text" name="email" id="email" required/>
+          </div>
+          <div class="col-12 form__datos">
+            <label class="form__label" for="mensaje">Mensaje<span class="form__asterisco">*</span></label>
+            <textarea class="form__input" name="mensaje" id="mensaje" rows="3" required></textarea>
+          </div>
+          <div class="col-12 form__privacidad">
+            <input class="input__privacidad" type="checkbox" name="privacidad" id="privacidad" />
+            <label class="label__privacidad" for="privacidad"
+              >Acepto la <a class="privacidad__text" href="#">política de privacidad</a></label
+            >
+          </div>
+          <div class="col-12 form__button">
+            <button class="button__enviar" type="submit">ENVIAR</button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__p">European Space Agency - 2023</p>
+    </footer>
+    <script src="js/bootstrap.js"></script>
+  </body>
+</html>
