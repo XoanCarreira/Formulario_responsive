@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Formulario con video</title>
+    <title>Formulario</title>
     <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
@@ -38,7 +38,7 @@
             pregunta ha sido respondida ya.
           </p>
         </div>
-        <form class="row" action="" method="post">
+        <form class="row" action="" method="">
           <div class="col-md-6 form__datos">
             <label class="form__label" for="nombre">Nombre<span class="form__asterisco">*</span></label>
             <input class="form__input" type="text" name="nombre" id="nombre" required/>
@@ -48,7 +48,7 @@
             <input class="form__input" type="text" name="apellidos" id="apellidos" required />
           </div>
           <div class="col-md-6 form__datos">
-            <label class="form__label" for="telefono">Teléfono<!--<span class="form__asterisco">*</span>--></label>
+            <label class="form__label" for="telefono">Teléfono</label>
             <input class="form__input" type="text" name="telefono" id="telefono" pattern="[0-9]{9}"/>
           </div>
           <div class="col-md-6 form__datos">
@@ -56,7 +56,7 @@
             <input class="form__input" type="text" name="empresa" id="empresa" />
           </div>
           <div class="col-12 form__datos">
-            <label class="form__label" for="email">Email<!--<span class="form__asterisco">*</span>--></label>
+            <label class="form__label" for="email">Email</label>
             <input class="form__input" type="text" name="email" id="email" />
           </div>
           <div class="col-12 form__datos">
@@ -70,7 +70,8 @@
             >
           </div>
           <div class="col-12 form__button">
-            <button onclick="verificar()" class="button__enviar" type="submit">ENVIAR</button>
+            <!--Type button en "button" en vez de "submit" para que se ejecute el js asignado sin problemas-->
+            <button onclick="verificar()" class="button__enviar" type="button">ENVIAR</button>
           </div>
         </form>
       </section>
