@@ -162,6 +162,43 @@ main{
     border: 2px solid var(--color-principal);
 }
 
+/*Estilos popup*/
+.popup__container{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #0000006b;
+    display: flex;
+    place-content: center;
+    align-items: center;
+}
+
+.popup__box{
+    max-width: 400px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px #0000006b;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.popup__p{
+    text-align: center;
+}
+
+.popup__buton{
+    border-radius: 5px;
+}
+
+.ocultar{
+    display: none;
+}
+
 
 /* Footer  */
 footer{

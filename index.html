@@ -48,36 +48,43 @@
             <input class="form__input" type="text" name="apellidos" id="apellidos" required />
           </div>
           <div class="col-md-6 form__datos">
-            <label class="form__label" for="telefono">Teléfono<span class="form__asterisco">*</span></label>
-            <input class="form__input" type="text" name="telefono" id="telefono" required pattern="[0-9]{9}"/>
+            <label class="form__label" for="telefono">Teléfono<!--<span class="form__asterisco">*</span>--></label>
+            <input class="form__input" type="text" name="telefono" id="telefono" pattern="[0-9]{9}"/>
           </div>
           <div class="col-md-6 form__datos">
             <label class="form__label" for="empresa">Empresa (opcional)</label>
             <input class="form__input" type="text" name="empresa" id="empresa" />
           </div>
           <div class="col-12 form__datos">
-            <label class="form__label" for="email">Email<span class="form__asterisco">*</span></label>
-            <input class="form__input" type="text" name="email" id="email" required/>
+            <label class="form__label" for="email">Email<!--<span class="form__asterisco">*</span>--></label>
+            <input class="form__input" type="text" name="email" id="email" />
           </div>
           <div class="col-12 form__datos">
             <label class="form__label" for="mensaje">Mensaje<span class="form__asterisco">*</span></label>
             <textarea class="form__input" name="mensaje" id="mensaje" rows="3" required></textarea>
           </div>
           <div class="col-12 form__privacidad">
-            <input class="input__privacidad" type="checkbox" name="privacidad" id="privacidad" />
+            <input class="input__privacidad" type="checkbox" name="privacidad" id="privacidad"/>
             <label class="label__privacidad" for="privacidad"
               >Acepto la <a class="privacidad__text" href="#">política de privacidad</a></label
             >
           </div>
           <div class="col-12 form__button">
-            <button class="button__enviar" type="submit">ENVIAR</button>
+            <button onclick="verificar()" class="button__enviar" type="submit">ENVIAR</button>
           </div>
         </form>
       </section>
+      <div id="popupContainer" class="popup__container ocultar">
+        <div class="popup__box">
+          <p class="popup__p">Esto solo es una muestra</p>
+          <button onclick="cerrar()" id="popupButon" class="popup__buton">Cerrar</button>
+        </div>
+      </div>
     </main>
     <footer class="footer">
       <p class="footer__p">European Space Agency - 2023</p>
     </footer>
+    <script src="js/script.js"></script>
     <script src="js/bootstrap.js"></script>
   </body>
 </html>
