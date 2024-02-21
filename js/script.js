@@ -11,7 +11,7 @@ let apellidos = document.getElementById("apellidos");
 
 function verificar(){
     if (nombre.value !== "" & apellidos.value !== "" & mensaje.value !== ""){
-        mostrar()
+        mostrar();
     }else{
         alert("Debes rellenar los campos indicados");
     }
@@ -29,3 +29,6 @@ function mostrar() {
 function cerrar() {
     popupContainer.classList.toggle("ocultar");
 }
+
+const enviar = document.querySelector(".button__enviar");
+enviar.addEventListener("click", function(event){event.preventDefault()});
