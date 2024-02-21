@@ -1,4 +1,4 @@
-const popupCerrar = document.getElementById("popupButoon");
+const popupCerrar = document.getElementById("popupButton");
 const popupContainer = document.getElementById("popupContainer");
 const textoPopup = document.querySelector(".popup__p");
 
@@ -9,18 +9,25 @@ let apellidos = document.getElementById("apellidos");
 
 
 
-function verificar(){
-    if (nombre.value !== "" & apellidos.value !== "" & mensaje.value !== ""){
+function verificar() {
+    if (nombre.value !== "" & apellidos.value !== "" & mensaje.value !== "") {
         mostrar();
-    }else{
+    } else {
         alert("Debes rellenar los campos indicados");
+        if(nombre.value === ""){
+            nombre.focus();
+        }else if(apellidos.value === ""){
+            apellidos.focus();
+        }else if(mensaje.value === ""){
+            mensaje.focus();
+        }
     }
 }
 
 
 function mostrar() {
     popupContainer.classList.toggle("ocultar");
-    textoPopup.textContent = `Hola ${nombre.value} ${apellidos.value}, gracias por el comentario (${mensaje.value}) pero esto solo es un formulario de muestra.`;
+    textoPopup.textContent = `Hola ${nombre.value} ${apellidos.value}, gracias por el comentario ("${mensaje.value}") pero esto solo es un formulario de muestra.`;
 }
 
 
